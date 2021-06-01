@@ -1,0 +1,16 @@
+Getting the image data:
+	The data is pulled from aws server, "aws s3 cp --recursive s3://impact-datashare/transverse_bands  . --no-sign-request"
+
+System requirement:
+	Python 3.8 (or above)
+	Tensorflow 2.4
+	Nvidia RTX 2060 GPU - cuda 11.0 - cudnn 11.0  (or equivalent)
+	RAM 16 GB (or more)
+
+How to run the programs:
+	1) Create a directory 
+	2) Pull cloudstreet dataset from NASA AWS server, "aws s3 cp --recursive s3://impact-datashare/transverse_bands . --no-sign-request". 
+	   Place the dataset "yes", "no" into the directory
+	2) Download and extract "data_process.py", "Model_Classical.py", and "Model_DL.py" and place them in the same directory.
+	3) Run "data_process.py" to generate 4 .npy files
+	4) Run "Model_Classical.py" and "Model_DL.py" to perform classification tasks.
